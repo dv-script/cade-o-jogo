@@ -12,11 +12,11 @@ import { IoFootball } from "react-icons/io5";
 import Link from "next/link";
 
 const championshipsOptions = [
-  { id: 1, label: "Paulistão Sicredi 2024", value: "paulistao-sicredi-2024" },
+  { id: 1, label: "Paulistão Sicredi 2024", value: "935" },
   {
     id: 2,
     label: "Paulistão A2 Sicredi 2024",
-    value: "paulistao-a2-sicredi-2024",
+    value: "",
   },
 ];
 
