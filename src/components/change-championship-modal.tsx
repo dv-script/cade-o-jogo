@@ -21,7 +21,7 @@ const championshipsOptions = [
 ];
 
 export function ChangeChampionshipModal() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
   return (
     <>
@@ -55,6 +55,7 @@ export function ChangeChampionshipModal() {
                 href={championship.value}
                 variant="bordered"
                 className="border-[#292f46] dark:border-[#292f46]"
+                onPress={onClose}
                 key={championship.id}
               >
                 {championship.label}
