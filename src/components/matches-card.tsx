@@ -87,6 +87,16 @@ export function MatchesCard({ matchesFilteredByRound }: IMatchCardProps) {
               ) : (
                 <p className="text-sm">{match.gameTime}</p>
               )}
+              <div className="flex flex-col gap-2 justify-center mt-4 w-full">
+                <div className="relative text-center">
+                  <span className="relative z-10 bg-zinc-900 text-white px-2">
+                    {match.gameTime === "Não Inic."
+                      ? "Onde assistir"
+                      : "Onde passou"}
+                  </span>
+                  <div className="absolute top-1/2 w-full border-b border-zinc-600"></div>
+                </div>
+              </div>
             </div>
           </div>
         );
