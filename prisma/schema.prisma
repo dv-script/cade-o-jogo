@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Users {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
+
+model Matches {
+  id              Int     @id @default(autoincrement())
+  idMatch         Int     @unique
+  hboMax          Boolean @default(false)
+  canalTnt        Boolean @default(false)
+  playPlus        Boolean @default(false)
+  canalRecord     Boolean @default(false)
+  cazeTv          Boolean @default(false)
+  paulistaoPlay   Boolean @default(false)
+  camisa21        Boolean @default(false)
+  futebolPaulista Boolean @default(false)
+  canalFutura     Boolean @default(false)
+  paulistao       Boolean @default(false)
+  sportv          Boolean @default(false)
+  globo           Boolean @default(false)
+  premiere        Boolean @default(false)
+}
