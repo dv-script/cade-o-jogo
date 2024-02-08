@@ -45,7 +45,7 @@ export function MatchesByRound({
         </Button>
         <div
           ref={scrollDiv}
-          className="flex items-center gap-2 overflow-x-scroll scrollbar-hide"
+          className="flex items-center gap-2 p-1 overflow-x-scroll scrollbar-hide"
         >
           {Array.from({ length: maxRound }, (_, i) => i + 1).map((round) => (
             <Button
