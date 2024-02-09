@@ -4,7 +4,6 @@ import { Poppins } from "next/font/google";
 import { NextUiProvider } from "@/providers/next-ui";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
-import { Header } from "@/components/header";
 import favicon from "@/assets/favicon.png";
 
 const poppins = Poppins({
@@ -33,7 +32,6 @@ export default function RootLayout({
         <NextUiProvider>
           <Toaster />
           <div className="flex flex-col min-h-screen">
-            <Header />
             <main className="flex-1">{children}</main>
           </div>
           <Analytics />
