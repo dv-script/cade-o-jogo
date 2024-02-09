@@ -12,13 +12,20 @@ datasource db {
 }
 
 model Users {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id        String    @id @default(uuid())
+  firstName String    @db.VarChar(30)
+  lastName  String    @db.VarChar(60)
+  email     String    @unique @db.VarChar(60)
+  password  String    @db.VarChar(120)
+  status    String    @db.VarChar(30)
+  roles     String[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  updatedBy String?   @db.VarChar(60)
 }
 
 model Matches {
-  id              Int     @id @default(autoincrement())
+  id              String  @id @default(uuid())
   idMatch         Int     @unique
   hboMax          Boolean @default(false)
   canalTnt        Boolean @default(false)
@@ -33,4 +40,5 @@ model Matches {
   sportv          Boolean @default(false)
   globo           Boolean @default(false)
   premiere        Boolean @default(false)
+  link            String  @db.VarChar(255) @default("")
 }
