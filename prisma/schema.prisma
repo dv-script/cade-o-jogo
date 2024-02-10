@@ -25,20 +25,22 @@ model Users {
 }
 
 model Matches {
-  id              String  @id @default(uuid())
-  idMatch         Int     @unique
-  hboMax          Boolean @default(false)
-  canalTnt        Boolean @default(false)
-  playPlus        Boolean @default(false)
-  canalRecord     Boolean @default(false)
-  cazeTv          Boolean @default(false)
-  paulistaoPlay   Boolean @default(false)
-  camisa21        Boolean @default(false)
-  futebolPaulista Boolean @default(false)
-  canalFutura     Boolean @default(false)
-  paulistao       Boolean @default(false)
-  sportv          Boolean @default(false)
-  globo           Boolean @default(false)
-  premiere        Boolean @default(false)
-  link            String  @db.VarChar(255) @default("")
+  id              String @id @default(uuid())
+  idMatch         Int    @unique
+  hboMax          String @default("") @db.VarChar(255)
+  canalTnt        String @default("") @db.VarChar(255)
+  playPlus        String @default("") @db.VarChar(255)
+  canalRecord     String @default("") @db.VarChar(255)
+  cazeTv          String @default("") @db.VarChar(255)
+  paulistaoPlay   String @default("") @db.VarChar(255)
+  camisa21        String @default("") @db.VarChar(255)
+  futebolPaulista String @default("") @db.VarChar(255)
+  canalFutura     String @default("") @db.VarChar(255)
+  paulistao       String @default("") @db.VarChar(255)
+  sportv          String @default("") @db.VarChar(255)
+  globo           String @default("") @db.VarChar(255)
+  premiere        String @default("") @db.VarChar(255)
+  round           Int    @default(0)
+  teamHome        String @db.VarChar(60)
+  teamAway        String @db.VarChar(60)
 }
