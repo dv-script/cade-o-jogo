@@ -1,12 +1,12 @@
-import { UsersTable } from "@/app/admin/dashboard/users/_components/users-table";
+import { UsersTable } from "./_components/users-table";
 import { Metadata } from "next";
 import { IUser } from "@/types/IUser";
 import { getAllUsers } from "@/actions/get-all-users";
 
 export const metadata: Metadata = {
-  title: "FPF - User Management Dashboard",
+  title: "Cadê o Jogo? - Administrador de Usuários",
   description:
-    "Administrate and manage all user accounts with full control over creation, editing, and deletion. Access detailed user information and perform batch actions for efficient user management.",
+    "Administre e gerencie todos os usuários com controle total sobre criação, edição e exclusão. Acesse informações detalhadas sobre os usuários e execute ações em lote para uma gestão eficiente dos usuários.",
 };
 
 export default async function Page() {
