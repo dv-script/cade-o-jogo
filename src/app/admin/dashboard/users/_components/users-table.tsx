@@ -33,7 +33,7 @@ import { IUser } from "@/types/IUser";
 import Link from "next/link";
 import { formatDateAbbreviation } from "@/utils/formatDateAbbreviation";
 import { EditUserModal } from "./edit-user-modal";
-import { DeleteUserModal } from "./delete-user-modal";
+import { DeleteUserModal } from "../../users/_components/delete-user-modal";
 
 interface IUsersTableProps {
   users: IUser[];
