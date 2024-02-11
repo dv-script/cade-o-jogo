@@ -1,6 +1,7 @@
 import { NextAuthConfig } from "next-auth";
 
 export const authConfig = {
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [],
   pages: {
     signIn: "/auth/sign-in",
@@ -11,13 +12,13 @@ export const authConfig = {
       const isAuthRoutes = nextUrl.pathname.startsWith("/auth");
       const isPrivateRoute = nextUrl.pathname.startsWith("/admin");
 
-      // if (isPrivateRoute && !isLoggedIn) {
-      //   return false;
-      // }
+      if (isPrivateRoute && !isLoggedIn) {
+        return false;
+      }
 
-      // if (isLoggedIn && isAuthRoutes) {
-      //   return Response.redirect(new URL("/", nextUrl));
-      // }
+      if (isLoggedIn && isAuthRoutes) {
+        return Response.redirect(new URL("/", nextUrl));
+      }
 
       return true;
     },
