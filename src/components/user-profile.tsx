@@ -28,7 +28,7 @@ export function UserProfile({ firstName, lastName }: UserProfileProps) {
           className="transition-transform text-ellipsis whitespace-nowrap overflow-hidden"
           avatarProps={{
             radius: "full",
-            name: firstName + lastName,
+            name: firstName[0] + lastName[0],
             color: "primary",
           }}
         />
@@ -51,14 +51,14 @@ export function UserProfile({ firstName, lastName }: UserProfileProps) {
               className="flex items-center gap-2 text-left rounded-lg px-4 py-2 transition-all hover:bg-slate-700 hover:text-blue-500"
             >
               <LuUserCircle />
-              Edit profile
+              Editar perfil
             </Link>
             <Link
               href="/admin/user/settings/change-your-password"
               className="flex items-center gap-2 text-left rounded-lg px-4 py-2 transition hover:bg-slate-700 hover:text-blue-500"
             >
               <LuSettings />
-              Settings
+              Configurações
             </Link>
             <UserLogout />
           </CardBody>
