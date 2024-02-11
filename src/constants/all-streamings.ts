@@ -1,0 +1,15 @@
+export const allStreamings = [
+  { name: "HBO Max", key: "hboMax" },
+  { name: "Canal TNT", key: "canalTnt" },
+  { name: "Play Plus", key: "playPlus" },
+  { name: "Canal Record", key: "canalRecord" },
+  { name: "Caze TV", key: "cazeTv" },
+  { name: "Paulistão Play", key: "paulistaoPlay" },
+  { name: "Camisa 21", key: "camisa21" },
+  { name: "Futebol Paulista", key: "futebolPaulista" },
+  { name: "Canal Futura", key: "canalFutura" },
+  { name: "Paulistão", key: "paulistao" },
+  { name: "SporTV", key: "sportv" },
+  { name: "Globo", key: "globo" },
+  { name: "Premiere", key: "premiere" },
+];
